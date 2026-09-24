@@ -27,5 +27,12 @@
 
 - Ajouter DTO et l'implementation de l'interface et utiliser DTO en service et les Mappers dans l'implementation de linterface
 
+---
+
+## Partie 4 —  Créer un Web service GraphQL
+
+- Création du fichier schema graphqls et ajout des operations
+- ajout du graphQL controller dans la couche web
+
 
 
