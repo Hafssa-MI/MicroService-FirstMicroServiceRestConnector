@@ -1,15 +1,30 @@
 package org.sid.bank_account_service.mappers;
 
+import org.sid.bank_account_service.dto.BankAccountRequestDTO;
 import org.sid.bank_account_service.dto.BankAccountResponseDTO;
 import org.sid.bank_account_service.entities.BankAccount;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component
 public class AccountMapper {
-    public BankAccountResponseDTO fromBankAccount(BankAccount bankAccount){
-        BankAccountResponseDTO bankAccountResponseDTO= new BankAccountResponseDTO();
-        BeanUtils.copyProperties(bankAccount,bankAccountResponseDTO);
-        return bankAccountResponseDTO;
+
+    public BankAccount fromRequestDTO(BankAccountRequestDTO dto) {
+
+        return BankAccount.builder()
+                .balance(dto.getBalance())
+                .currency(dto.getCurrency())
+                .type(dto.getType())
+                .build();
+    }
+
+    public BankAccountResponseDTO fromBankAccount(BankAccount bankAccount) {
+
+        return BankAccountResponseDTO.builder()
+                .id(bankAccount.getId())
+                .createdAt(bankAccount.getCreatedAt())
+                .balance(bankAccount.getBalance())
+                .currency(bankAccount.getCurrency())
+                .type(bankAccount.getType())
+                .build();
     }
 }
