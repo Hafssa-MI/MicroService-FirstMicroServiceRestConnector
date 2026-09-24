@@ -36,4 +36,12 @@
 - Gestion des exceptions par une classe dédié
 
 
+---
+
+
+## Partie 5 —  Créer l'Entite Customer et son interface, Controller, les DTOs et Mappers
+
+- créer les classes du customer et initialiser
+
+
 
