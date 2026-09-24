@@ -33,6 +33,7 @@
 
 - Création du fichier schema graphqls et ajout des operations
 - ajout du graphQL controller dans la couche web
+- Gestion des exceptions par une classe dédié
 
 
 
